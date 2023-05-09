@@ -54,7 +54,7 @@ inputs:
   skipDatabaseStep: true
     description: ''
     required: false
-  url: jdbc:mysql://localhost:3306/e-commerce_cart
+  url: jdbc:mysql://localhost:3306
     description: '*required* The JDBC database connection URL'
     required: true
   username: root
