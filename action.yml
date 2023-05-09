@@ -8,10 +8,10 @@ inputs:
     required: false
   changeExecListenerClass: # string
     description: 'Fully-qualified class which specifies a ChangeExecListener'
-    required: false
+    required: true
   changeExecListenerPropertiesFile: C:\liquibase_test/liquibase.propertiesg
     description: 'Path to a properties file for the ChangeExecListenerClass'
-    required: false
+    required: true
   changelogFile: C:\liquibase_test/dbchangelog.xml
     description: '*required* The root changelog'
     required: true
@@ -29,13 +29,13 @@ inputs:
     required: false
   defaultSchemaName: e-commerce_cart
     description: 'The default schema name to use for the database connection'
-    required: false
+    required: true
   driver: com.mysql.cj.jdbc.Driver
     description: 'The JDBC driver class'
-    required: false
+    required: true
   driverPropertiesFile: C:\liquibase_test/liquibase.properties
     description: 'The JDBC driver properties file'
-    required: false
+    required: true
   labelFilter: # string
     description: 'Changeset labels to match'
     required: false
@@ -50,7 +50,7 @@ inputs:
     required: false
   password: ThisIsANewPassword22
     description: 'Password to use to connect to the database'
-    required: false
+    required: true
   skipDatabaseStep: true
     description: ''
     required: false
