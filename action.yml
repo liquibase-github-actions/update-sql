@@ -9,10 +9,10 @@ inputs:
   changeExecListenerClass: # string
     description: 'Fully-qualified class which specifies a ChangeExecListener'
     required: false
-  changeExecListenerPropertiesFile: # string
+  changeExecListenerPropertiesFile: C:\liquibase_test/liquibase.propertiesg
     description: 'Path to a properties file for the ChangeExecListenerClass'
     required: false
-  changelogFile: # string
+  changelogFile: C:\liquibase_test/dbchangelog.xml
     description: '*required* The root changelog'
     required: true
   changelogParameters: # string
@@ -27,13 +27,13 @@ inputs:
   defaultCatalogName: # string
     description: 'The default catalog name to use for the database connection'
     required: false
-  defaultSchemaName: # string
+  defaultSchemaName: e-commerce_cart
     description: 'The default schema name to use for the database connection'
     required: false
-  driver: # string
+  driver: com.mysql.cj.jdbc.Driver
     description: 'The JDBC driver class'
     required: false
-  driverPropertiesFile: # string
+  driverPropertiesFile: C:\liquibase_test/liquibase.properties
     description: 'The JDBC driver properties file'
     required: false
   labelFilter: # string
@@ -48,16 +48,16 @@ inputs:
   outputWriter: # string
     description: ''
     required: false
-  password: # string
+  password: ThisIsANewPassword22
     description: 'Password to use to connect to the database'
     required: false
-  skipDatabaseStep: # bool
+  skipDatabaseStep: true
     description: ''
     required: false
-  url: # string
+  url: jdbc:mysql://localhost:3306/e-commerce_cart
     description: '*required* The JDBC database connection URL'
     required: true
-  username: # string
+  username: root
     description: 'Username to use to connect to the database'
     required: false
   alwaysDropInsteadOfReplace: # bool
@@ -147,10 +147,10 @@ inputs:
   liquibaseCatalogName: # string
     description: 'Catalog to use for Liquibase objects'
     required: false
-  liquibaseSchemaName: # string
+  liquibaseSchemaName: e-commerce_cart
     description: 'Schema to use for Liquibase objects'
     required: false
-  liquibaseTablespaceName: # string
+  liquibaseTablespaceName: users
     description: 'Tablespace to use for Liquibase objects'
     required: false
   logChannels: # string
