@@ -9,7 +9,7 @@ inputs:
   changeExecListenerClass: # string
     description: 'Fully-qualified class which specifies a ChangeExecListener'
     required: true
-  changeExecListenerPropertiesFile: C:\liquibase_test/liquibase.propertiesg
+  changeExecListenerPropertiesFile: C:\liquibase_test/liquibase.properties
     description: 'Path to a properties file for the ChangeExecListenerClass'
     required: true
   changelogFile: C:\liquibase_test/dbchangelog.xml
@@ -54,7 +54,7 @@ inputs:
   skipDatabaseStep: true
     description: ''
     required: false
-  url: jdbc:mysql://localhost:3306
+  url: jdbc:mysql://localhost:3306/
     description: '*required* The JDBC database connection URL'
     required: true
   username: root
@@ -240,105 +240,6 @@ inputs:
   validateXmlChangelogFiles: # bool
     description: 'Will perform xsd validation of XML changelog files. When many XML changelog files are included this validation may impact Liquibase performance. Defaults to true.'
     required: false
- steps:
-- uses: actions/checkout@v3
-- uses: liquibase-github-actions/update-sql@v4.21.1
-  with:
-    # The root changelog
-    # string
-    # Required
-    changelogFile: "C:\liquibase_test/dbchangelog.xml"
-
-    # The JDBC database connection URL
-    # string
-    # Required
-    url: "jdbc:mysql://localhost:3306/e-commerce_cart"
-
-    # 
-    # string
-    # Optional
-    changeExecListener: "jdbc:mysql://localhost:3306/e-commerce_cart"
-
-    # Fully-qualified class which specifies a ChangeExecListener
-    # string
-    # Optional
-    changeExecListenerClass: ""
-
-    # Path to a properties file for the ChangeExecListenerClass
-    # string
-    # Optional
-    changeExecListenerPropertiesFile: ""
-
-    # 
-    # string
-    # Optional
-    changelogParameters: ""
-
-    # Changeset contexts to match
-    # string
-    # Optional
-    contexts: ""
-
-    # 
-    # string
-    # Optional
-    database: ""
-
-    # The default catalog name to use for the database connection
-    # string
-    # Optional
-    defaultCatalogName: ""
-
-    # The default schema name to use for the database connection
-    # string
-    # Optional
-    defaultSchemaName: "e-commerce_cart"
-
-    # The JDBC driver class
-    # string
-    # Optional
-    driver: "com.mysql.cj.jdbc.Driver"
-
-    # The JDBC driver properties file
-    # string
-    # Optional
-    driverPropertiesFile: "C:\liquibase_test/liquibase.properties"
-
-    # Changeset labels to match
-    # string
-    # Optional
-    labelFilter: ""
-
-    # Control whether names of objects in the default catalog are fully qualified or not. If true they are. If false, only objects outside the default catalog are fully qualified
-    # bool
-    # Optional
-    outputDefaultCatalog: ""
-
-    # Control whether names of objects in the default schema are fully qualified or not. If true they are. If false, only objects outside the default schema are fully qualified
-    # bool
-    # Optional
-    outputDefaultSchema: ""
-
-    # 
-    # string
-    # Optional
-    outputWriter: ""
-
-    # Password to use to connect to the database
-    # string
-    # Optional
-    password: "ThisIsANewPassword22"
-
-    # 
-    # bool
-    # Optional
-    skipDatabaseStep: ""
-
-    # Username to use to connect to the database
-    # string
-    # Optional
-    username: "root"
-
 runs:
   using: 'docker'
   image: 'Dockerfile'
