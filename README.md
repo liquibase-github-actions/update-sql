@@ -6,7 +6,7 @@ Generate the SQL to deploy changes in the changelog which have not been deployed
 ```yaml
 steps:
 - uses: actions/checkout@v3
-- uses: liquibase-github-actions/update-sql@v4.23.0
+- uses: liquibase-github-actions/update-sql@v4.23.1
   with:
     # The root changelog
     # string
@@ -90,7 +90,7 @@ The liquibase update sql action accepts all valid liquibase global options as op
 ```yaml
 steps:
   - uses: actions/checkout@v3
-  - uses: liquibase-github-actions/update-sql@v4.23.0
+  - uses: liquibase-github-actions/update-sql@v4.23.1
     with:
       changelogFile: ""
       url: ""
